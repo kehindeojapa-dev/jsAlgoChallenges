@@ -25,7 +25,7 @@ Reference the source for further info. Examples matchHouses(1) ->6, matchHouses(
 
 ### C14: CAPS LOCK DAY is over!
 
-Create a function that takes a string, if the string is all uppercase characters, convert it to lowercase and add an exclamation mark at the end. Examples: normalize("CAPS LOCK DAY IS OVER") -> "Caps lock day is over !", normalize("Today is not caps lock day") -> "Today is not caps lock day"    Note: Each string is a sentence and should start with an uppercase character.
+Create a function that takes a string, if the string is all uppercase characters, convert it to lowercase and add an exclamation mark at the end. Examples: normalize("CAPS LOCK DAY IS OVER") -> "Caps lock day is over !", normalize("Today is not caps lock day") -> "Today is not caps lock day"    Note: Each string is a sentence and should start with an uppercase character.       (Edabit(E))
 
 
 
