@@ -1,5 +1,11 @@
 # JS Algorithm Challenges
 
+### C18: Largest Swap
+
+Write a function that takes a two-digit number and determines if it's the largest of two possible digit swaps. To illustrate: largestSwap(27) -> false, largestswap(43) -> false
+
+
+
 ### C17: What's Hiding Amongst the Crowd?
 
 A word is on the loose and now has tried to hide amongst a crowd of tall letters! Help write a function to detect what the word is, knowing the following rules:
