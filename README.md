@@ -1,8 +1,89 @@
 # JS Algorithm Challenges
 
+
+### C30: Regex Series: Even Number?
+
+Write a regular expression that matches only an even number. Numbers will be represented as strings. Examples: '2341' -> false, '5558' -> true. This challenge is designed to use Regex only.
+
+
+
+### C29: Remove Every Vowel from a String
+
+Create a function that takes a string and returns a new string with all vowels removed. Examples: removeVowels("I have never seen a lion) -> " hv nvr sn ln", ("We're gonna build a wall) -> "W'r gnn bld  wll"
+
+
+
+### C28: Chat Room Status
+
+Write a function that returns the number of users in a chatroom based on the following rules:
+    1. If there is on one, return "no one online".
+    2. If there is 1 person, return "user1 online".
+    3. If there are 2 people, return "user1 and user2 online".
+    4. If there are n>2 people, return the first two names and add "and n-2 more online".
+Examples: chatroomStatus([]) -> "no one online", (["daniscon"]) -> daniscon online, (["daniscon", "mai","wduw","2e2"]) -> "daniscon, mai and 2 more online".
+
+
+
+### C27: Return the Highest and Lowest Numbers
+
+Create a function that accepts a string of space seperated numbers and returns the highest and lowest number(as a string). Examples: highLow("1 2 3 4 5") -> "5 1", ("1 2 -3 4 5") -> "5 -3", ("13") -> "13 13". Notes: there will always be one number in the input string.        (Edabit(E))
+
+
+
+### C26: Maximum Edge of a Triangle
+
+Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers. Examples: nextEdge(8,10) ->17, (9,2) ->10.
+
+
+
+### C25: How Many Vowels?
+
+Create a function that takes a string and returns the number(count) of vowels contained within it. Examples: countVowels('Celebration') -> 5, ('Palm') -> 1.        (Edabit(E))
+
+
+### C24: Sort an Array by String Length
+
+Create a function that takes an array of strings and return an array, sorted from shortest to longest. Examples: sortByLength(['Google', 'Apple','Microsoft']) -> ['Apple', 'Google', 'Microsoft'], (['Turing', 'Einstein, 'Jung']) -> ['Jung', 'Turing', 'Einstein'].      (Edabit(E))
+
+
+
+### C23: Secret Society
+
+A group of friends have decided to start a secret society. The name will be the first letter of each of their names, sorted in alphabetical order. Create a function that takes in an array of names and returns the name of the secret society. Examples: societyName(['Adam','Sarah','Malcolm']) -> 'AMS', (['Harry','Newt','Luna','Cho']) -> CHLN. The secret society's name should be entirely uppercased.      (Edabit(E))
+
+
+
+### C22: Sort Numbers in Ascending Order
+
+Create a function that takes an array of numbers and returns a new array, sorted in ascending order(smallest to biggest).
+    - Sort numbers array in ascending order.
+    - If the function's argument is null, an empty array, or undefined; return an empty array.
+    - Return a new array of sorted number.
+Examples: sortNumAscend([1,2,10,50,5]) -> [1,2,5,10,50], [80,29,4,-95,-24,85] -> [-95,-24,4,29,80,85], (null) -> [], ([]) -> [].        (Edabit(E))
+
+
+
+### C21: Reverse the Case
+
+Get a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa. Examples: reverseCase('Happy Birthday') -> 'hAPPY bIRTHDAY', ('MANY THANKS') -> 'many thanks', ('sPoNtAnEoUs') -> 'SpOnTaNeOuS'.        (Edabit(E))
+
+
+
+### C20: Absolute Sum
+
+Take an array of integers(positive or negative or both) and return the sum of the absolute value of each element. Examples: getAbsSum([2,-1,4,8,10]) -> 25, getAbsSum([-3,-4,-10,-2,-3]) -> 22, getAbsSum([2,4,6,8,10]) -> 30.      (Edabit(E))
+
+
+
+### C19: Phone Number Formatting
+
+Create a function that takes an array of 10 numbers(btw 0 -9) and returns a string of those numbers formatted as a phone number(e.g (555) 555-5555). formatPhoneNumber([1,2,3,4,5,6,7,8,9,0]) -> "(123) 456-7890".      (Edabit(E))
+
+
+
 ### C18: Largest Swap
 
-Write a function that takes a two-digit number and determines if it's the largest of two possible digit swaps. To illustrate: largestSwap(27) -> false, largestswap(43) -> false
+Write a function that takes a two-digit number and determines if it's the largest of two possible digit swaps. To illustrate: largestSwap(27) -> false, largestswap(43) -> false. If 27 is our input, we should return false because swapping the digits gives us 72 and 72 > 27. On the other hand, swapping 43 gives us 34, and 43 > 34. Numbers with two identical digits should yield true(you can't do better).        (Edabit(E))
 
 
 
