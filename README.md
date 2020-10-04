@@ -32,8 +32,7 @@ Create a function that accepts a string of space seperated numbers and returns t
 
 ### C26: Maximum Edge of a Triangle
 
-Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers. Examples: nextEdge(8,10) ->17, (9,2) ->10.
-
+Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers. Examples: nextEdge(8,10) ->17, (9,2) ->10.      (Edabit(E))
 
 
 ### C25: How Many Vowels?
