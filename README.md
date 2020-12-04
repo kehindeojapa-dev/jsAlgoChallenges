@@ -1,15 +1,71 @@
 # JS Algorithm Challenges
 
+### C39: Number Length Sort
+
+Create a sorting function which sorts numbers not by numerical order, but by number length!. This means sorting numbers with the least amount o digits
+
+
+
+### C38: Basic Calculator
+
+Create a function that takes two numbers a mathematical operator(+, -, /, *) and will perform a calculation with the given numbers. Examples: calculator(2, "+", 2) -> 4, (2, "*" 2) -> 4, (4, "/", 2) -> 2.    If the input tries to divide by 0, return 'can't divide by 0!'
+
+
+
+### C37: Find Nemo
+
+You are given a string of words. You need to find the word "Nemo", and returns a string like this: 'I found Nemo at [the order of the word you find Nemo]!', if you can't find nemo, return 'I can't find Nemo :('. Examples: findNemo("I am finding Nemo !") -> 'I found Nemo at 4', ("Nemo is me") -> 'I found Nemo at 1'.    If there are multiple Nemo's in the sentence, only return for the first one. 
+
+
+
+### C36: Triangular Number Sequence
+
+The triangular Number sequence is generated from a pattern of dots that form a triangle. The first 5 numbers of the sequence, or dots, are: 1, 3, 6, 10, 15.    This means that the first triangle has just one dot, the second one has three dots, the third one has 6 dots, and so on.
+Write a function that gives the number of dots with its corresponding triangle number of the sequence. Examples: triangle(1) -> 1, (6) -> 21, (215) -> 23220;
+
+
+
+### C35: Converting Objects to Arrays
+
+Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array. Examples: toArray({a:1, b:2}) -> [["a", 1], ["b", 2]], ({shrimp:15, tots:12}) -> [["shrimp", 15], ["tots", 12]], ({}) -> []. Return an empty array if the object is empty.
+
+
+
+### C34: A Redundant Function
+
+Write a function redundant that takes in a string str and returns a function that returns str. Examples: 
+    const f1 = redundant('apple'), f1() -> 'apple'.    
+    const f3 = redundant(""), f3() -> "".
+Your function should return a function, not a string.           (Edabit(I))
+ 
+
+
+### C33: Find the nth Tetrahedral Number
+
+Create a function that takes an integer n and returns the nth tetrahedral number. Examples: tetra(2) -> 4, (5) -> 35, (6) -> 56.        (Edabit(I))
+
+
+### C32: How Much is True?
+
+Create a function which returns the numer of true values there are in an array. Examples: countTrue([true, false, false, true, false]) -> 2, ([false, false, false, false]) -> 0, ([]) -> 0. Return 0 if given an empty array, array items are of the type bool(true/false)             (Edabit(I))
+
+
+
+### C31: Is the Number a Repdigit
+
+A repdigit is a positive number composed out of the same digit. Create a function that takes an integer and returns whether it's a repdigit or not. Examples: isRepdigit(66) -> true, (0) -> true, (-11) -> false. The number 0 should return true.         (Edabit(I))
+
+
 
 ### C30: Regex Series: Even Number?
 
-Write a regular expression that matches only an even number. Numbers will be represented as strings. Examples: '2341' -> false, '5558' -> true. This challenge is designed to use Regex only.
+Write a regular expression that matches only an even number. Numbers will be represented as strings. Examples: '2341' -> false, '5558' -> true. This challenge is designed to use Regex only.       (Edabit(E))
 
 
 
 ### C29: Remove Every Vowel from a String
 
-Create a function that takes a string and returns a new string with all vowels removed. Examples: removeVowels("I have never seen a lion) -> " hv nvr sn ln", ("We're gonna build a wall) -> "W'r gnn bld  wll"
+Create a function that takes a string and returns a new string with all vowels removed. Examples: removeVowels("I have never seen a lion) -> " hv nvr sn ln", ("We're gonna build a wall) -> "W'r gnn bld  wll"         (Edabit(E))
 
 
 
@@ -20,7 +76,7 @@ Write a function that returns the number of users in a chatroom based on the fol
     2. If there is 1 person, return "user1 online".
     3. If there are 2 people, return "user1 and user2 online".
     4. If there are n>2 people, return the first two names and add "and n-2 more online".
-Examples: chatroomStatus([]) -> "no one online", (["daniscon"]) -> daniscon online, (["daniscon", "mai","wduw","2e2"]) -> "daniscon, mai and 2 more online".
+Examples: chatroomStatus([]) -> "no one online", (["daniscon"]) -> daniscon online, (["daniscon", "mai","wduw","2e2"]) -> "daniscon, mai and 2 more online".        (Edabit(E))
 
 
 
@@ -134,7 +190,7 @@ Create a function that receives a non-negative integer and returns the factorial
 
 ### C10: Upvotes vs Downvotes
 
-Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed. This is calculted by substracting the number of downvotes from upvotes. Examples: getVoteCount({upvotes:13, downvotes:0}) ->13, getVoteCount({upvotes:2, downvotes:33}) ->-31, getVoteCount({upvotes:132, downvotes:132}) ->0. You can expect only positive integers for vote counts.
+Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed. This is calculted by substracting the number of downvotes from upvotes. Examples: getVoteCount({upvotes:13, downvotes:0}) ->13, getVoteCount({upvotes:2, downvotes:33}) ->-31, getVoteCount({upvotes:132, downvotes:132}) ->0. You can expect only positive integers for vote counts.          (Edabit(VE))
 
 
 
