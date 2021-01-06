@@ -1,7 +1,7 @@
 # JS Algorithm Challenges
 ### This repo contains solutions to algorithmic challenges, aim is to get better understanding of Javascript. 
 - Goal: 100 challenges
-- Milestone: 30 challenges solved
+- Milestone: 33 challenges solved
 - Reference: I = Intermediate, E = Easy, V = Very Easy
 
 
