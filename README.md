@@ -125,7 +125,7 @@ numberLenSort([1,54,1,2,463,2]) -> [1,1,2,2,54,463], ([9,8,7,6,5,4,31,4,31,2,1,3
 
 ### C38: Basic Calculator
 
-Create a function that takes two numbers a mathematical operator(+, -, /, *) 
+Create a function that takes two numbers and a mathematical operator(+, -, /, *) 
 and will perform a calculation with the given numbers. Examples: calculator(2, "+", 2) -> 4, (2, "*" 2) -> 4, (4, "/", 2) -> 2.    If the input tries to divide by 0, return 'can't divide by 0!'. 
 ***source: (Edabit(I))***
 
