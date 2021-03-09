@@ -2,7 +2,196 @@
 ### This repo contains solutions to algorithmic challenges, aim is to get better understanding of Javascript. 
 - Goal: 100 challenges
 - Milestone: 50 challenges solved
-- Reference: I = Intermediate, E = Easy, V = Very Easy
+- Reference: H = Hard, I = Intermediate, E = Easy, V = Very Easy
+
+### C65: Pentagonal Number
+
+Write a function that takes a positive integer num and calculates how many dots exist in a pentagonal shape around the center dot on the Nth iteration. Return the number of dots that exist in the whole pentagon on the Nth iteration
+Examples:
+pentagonal(1) -> 1
+pentagonal(2) -> 6
+pentagonal(3) -> 16
+pentagonal(8) -> 141
+        ***source: (Edabit(H))***
+
+
+
+### C64: How Many Days Between Two Dates
+
+Create a function that takes two dates and returns the number of days between the first and second date.
+Examples:
+getDays(
+    new Date("June 14, 2019"),
+    new Date("June 20, 2019")
+) -> 6
+getDays(
+    new Date("December 29, 2018"),
+    new Date("January 1, 2019")
+) -> 3
+        ***source: (Edabit(H))***
+
+
+
+### C63: Length of a Nested Array
+
+The .length property on an array will return the number of elements in the array. For example [1, [2,4]] will return 2 number 1 and array[2]. 
+Write a function tha returns the total number of non-nested items in a nested array.
+Examples:
+getLength([1, [2,3]]) -> 3
+getLength([1. [2, [3,4]]]) -> 4
+getLength(1, [2], 1, [2], 1) -> 5
+        ***source: (Edabit(H))***
+
+
+
+### C62: Bitwise Operator to Check Odd, Regular Expression to Check Even
+
+Create two functions:
+-   The first is isOdd() to check if a given number is odd using bitwise operator.
+-   The second is isEven() to check if a given input is even using regular expressions.
+Use of % operator is disallowed.
+Examples:
+isOdd(3) -> 'Yes' // use bitwise operator
+isOdd(58) -> 'No' // use bitwise operator
+isEven('0') -> 'Yes' //use Regular Expression
+isEven('-99') -> 'No' // use Regular Expression
+NOTE: Input will only be integers, for the second function, input will be numbers in string.
+        ***source: (Edabit(H))***
+
+
+
+### C61: Number of Boomerangs
+
+A boomerang is a V-shaped sequence that is either upright or upside down. Specifically, a boomerang can be defined as: sub-array of length 3, with the first and last digits being the same and the middle digit being different.
+examples: [3,7,3], [1, -1, 1], [5,6,5];
+Create a function that returns the total number of boomerangs in an array.
+To illustrate:
+[3,7,3,2,1,5,1,2,2,-2,2,] -> 3 Boomerangs: [3,7,3], [1,5,1], [2,-2,2]
+
+Examples:
+countBoomerangs([9,5,9,5,1,1,1]) -> 2
+countBoomerangs([1,7,1,7,1,7,1]) -> 5
+countBoomerangs([4,4,4,9,9,9,9]) -> 0
+         ***source: (Edabit(H))***
+
+
+
+### C60: Oddish vs Evenish
+
+Create a function that determines whether a number is Oddish or Evenish. A number is Oddish if the sum of all of its digits is odd, and a number is Evenish if the sum of all of its digits is even. If a number is Oddish, return "Oddish". Otherwise, return "Evenish".
+Examples:
+oddishOrEvenish(43) -> Oddish // 4 + 3 = 7;
+oddishOrEvenish(372) -> Evenish // 3 + 7 + 2 = 12;
+        ***source: (Edabit(H))***
+
+
+
+### C59: Converting One Binary String to Another
+
+Write a function that returns the minimum number of swaps to convert the first binary string into the second.
+
+Examples:
+lcm('1100', '1001') -> 1;
+lcm('1100', '0011') -> 2;
+lcm('1001', '1001') -> 0;
+        ***source: (Edabit(H))***
+
+
+
+### C58: LCM of Two Numbers
+
+Write a function that returns the least common multiple(LCM) of two integers.
+Examples:
+lcm(9, 18) -> 18;
+lcm(8, 5) -> 40;
+lcm(17, 11) -> 187;
+        ***source: (Edabit(H))***
+
+
+
+### C57: The Frugal Gentleman
+
+Atticus as been invited to a dinner party, and he decides to purchase a bottle of wine. However, he has little knowledge of how to choose a good bottle. Being a frugal gentleman(yet disliking looking like a cheapstake), he decides to use a very simple rule. In any selection of two or more wines, he will always buy the second-cheapest.
+Given an array of wine objects, write a function that returns the name of the wine he will buy for the party. If given an empty array, return null. If given an array of only one, Atticus will buy that wine
+Examples:
+chosenWine([{
+    {name: 'wineA', price: 8.99}
+    {name: 'wineB', price: 13.99}
+    {name: 'wineC', price: 10.99}
+}]) -> wineC
+chosenWine([{name: wineA, price: 8.99}]) -> wineA
+chosenWine([]) -> null
+        ***source: (Edabit(H))***
+
+
+
+### C56: Tower of Hanoi
+
+There are three towers. The objective of the game is to move all the disks over to tower#3, but you can't place a larger disk onto a smaller disk. 
+Create a function that takes a number (discs) and returns the minimum amount of steps needed to complete the game.
+Examples:
+towerHanoi(3) -> 7
+towerHanoi(5) -> 31
+towerHanoi(0) -> 0
+        ***source: (Edabit(H))***
+
+
+
+### C55: Pandigital Numbers
+
+A pandigital number contains all digits(0-9) at least once. Write a function that takes an integer, returning true if the integer is pandigital, and false otherwise.
+Examples:
+isPandigital(98140723568910) -> true
+isPandigital(90864523148909) -> false // 7 is missing
+isPandigital(11223344556677889900) -> true
+        ***source: (Edabit(H))***
+
+
+
+### C54: Seven Boom!
+
+Create a function that takes an array of numbers and return "Boom!" if the digit appears in the array. Otherwise, return "there is no 7 in the array".
+Examples:
+sevenBoom([1,2,3,4,5,6,7]) -> Boom!
+sevenBoom([8,6,33,100]) -> there is no 7 in the array.
+sevenBoom([2, 55, 60, 97, 86]) -> Boom! // 97 contains the number seven.        ***source: (Edabit(H))***
+
+
+
+### C53: repeatedrepeatedrepeaed
+
+This challenge concerns strings such as: 'repeatedrepeatedrepeated' that are obtained by repeating a smaller string, which in this case is the string 'repeated'.
+Write a function that, given a string, either: 
+- Returns false if the string isn't made by repeating a smaller string or ...
+- Returns the number of repetitions if the string repeats a smaller string.
+Examples:
+isRepeated('repeatedrepeatedrepeated') -> 3
+isRepeated('overintellectualization) -> false
+isRepeated('nononononono) -> 6
+***source: (Edabit(H))***
+
+
+
+### C52: Numbers in Strings
+
+Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array
+Examples:
+numInStr(['1a', 'a', '2b', 'b']) -> ['1a', '2b]
+numInStr(['abc', 'abc10']) -> ['abc10'];
+NOTE: Try solving this without regex.
+***source: (Edabit(H))***
+
+
+
+### C51: Combinations
+
+Create a function that takes a variable number of arguments, each argument representing the nuber of items in a group, and returns the number of permutations(combinations) of items that you could get by taking one item from each group
+Examples:
+combinations(2, 3) -> 6
+combinations(3, 7, 4) -> 84
+combinations(2, 3, 4, 5) -> 120
+***source: (Edabit(H))***
+
 
 
 ### C50: Sum of Number Elements in an Array
