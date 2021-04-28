@@ -16,6 +16,7 @@ function lcm(...numbers) {
   let totalfactors = [];
 
   // Number1 multiple factors
+  //convert number like 8 = 2*2*2;
   for (let i = 2; i <= numbers[0]; i++) {
     if (numbers[0] % i == 0) {
       let num = numbers[0] / i;
@@ -32,6 +33,7 @@ function lcm(...numbers) {
   }
 
   // Number2 multiple factors
+  //convert number like 12 = 2*3*4;
   for (let i = 2; i <= numbers[1]; i++) {
     if (numbers[1] % i == 0) {
       let num = numbers[1] / i;
@@ -47,6 +49,7 @@ function lcm(...numbers) {
     }
   }
 
+  // Get numbers that appear in the numbers factors.
   let num1digits = [];
   let num2digits = [];
   for (let i = 0; i < num1factors.length; i++) {
@@ -62,8 +65,8 @@ function lcm(...numbers) {
   num1digits.push(num1factors[num1factors.length - 1]);
   num2digits.push(num2factors[num2factors.length - 1]);
 
+  // Get the number of times a factor appeared.
   let powerCount = [];
-
   for (let i = 0; i < num1digits.length; i++) {
     let count = 0;
     for (let j = 0; j < num1factors.length; j++) {
@@ -90,6 +93,7 @@ function lcm(...numbers) {
   }
   powerCount.sort((a, b) => a.num - b.num);
 
+  // Remove factor of the same digit but with lesser power.
   for (let i = 1; i < powerCount.length; i++) {
     if (powerCount[i - 1].num == powerCount[i].num) {
       if (powerCount[i - 1].power > powerCount[i].power) {
@@ -100,17 +104,14 @@ function lcm(...numbers) {
     }
   }
 
+  // Multiply the remaining numbers with their power to get the LCM
   let lcm = 1;
   powerCount.forEach((digit) => {
     let total = digit.num ** digit.power;
     lcm *= total;
   });
 
-  console.log(num1factors, num2factors);
-  console.log(num1digits, num2digits);
-  console.log(powerCount);
-
-  console.log(lcm);
+  return lcm;
 }
 
 console.log(lcm(11, 17));
