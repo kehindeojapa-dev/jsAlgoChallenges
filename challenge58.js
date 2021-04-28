@@ -18,9 +18,10 @@ function lcm(...numbers) {
   // Number1 multiple factors
   for (let i = 2; i <= numbers[0]; i++) {
     if (numbers[0] % i == 0) {
-      let num = numbers[0];
+      let num = numbers[0] / i;
       let divisor = i;
-      for (let j = 2; j < num; j++) {
+      num1factors.push(divisor);
+      for (let j = 2; j < num + 100; j++) {
         if (num % divisor == 0) {
           num1factors.push(divisor);
           num = num / divisor;
@@ -33,9 +34,10 @@ function lcm(...numbers) {
   // Number2 multiple factors
   for (let i = 2; i <= numbers[1]; i++) {
     if (numbers[1] % i == 0) {
-      let num = numbers[1];
+      let num = numbers[1] / i;
       let divisor = i;
-      for (let j = 2; j < num; j++) {
+      num2factors.push(divisor);
+      for (let j = 2; j <= num + 100; j++) {
         if (num % divisor == 0) {
           num2factors.push(divisor);
           num = num / divisor;
@@ -45,62 +47,73 @@ function lcm(...numbers) {
     }
   }
 
-  if (num1factors.length > num2factors.length) {
-    moreFactors = num1factors;
-    lessFactors = num2factors;
-  } else {
-    moreFactors = num2factors;
-    lessFactors = num1factors;
-  }
-
-  // for (let i = 0; i < moreFactors.length; i++) {
-  //   // console.log(num1factors[i]);
-  //   if (moreFactors[i] == lessFactors[i]) {
-  //     totalfactors.push(moreFactors[i]);
-  //   } else {
-  //     if (moreFactors[i] != undefined) {
-  //       totalfactors.push(moreFactors[i]);
-  //     }
-  //     if (lessFactors[i] != undefined) {
-  //       totalfactors.push(lessFactors[i]);
-  //     }
-  //   }
-  // }
-  let powerCount = [];
-  let powerCount1 = [];
-  let count1 = 1;
+  let num1digits = [];
+  let num2digits = [];
   for (let i = 0; i < num1factors.length; i++) {
-    if (num1factors[i] == num1factors[i + 1]) {
-      count1++;
-      powerCount1.push({
-        num: num1factors[i],
-        power: count1,
-      });
-    } else {
-      count1 = 1;
+    if (num1factors[i + 1] > num1factors[i]) {
+      num1digits.push(num1factors[i]);
+    }
+  }
+  for (let i = 0; i < num2factors.length; i++) {
+    if (num2factors[i + 1] > num2factors[i]) {
+      num2digits.push(num2factors[i]);
+    }
+  }
+  num1digits.push(num1factors[num1factors.length - 1]);
+  num2digits.push(num2factors[num2factors.length - 1]);
+
+  let powerCount = [];
+
+  for (let i = 0; i < num1digits.length; i++) {
+    let count = 0;
+    for (let j = 0; j < num1factors.length; j++) {
+      if (num1digits[i] == num1factors[j]) {
+        count++;
+      }
+    }
+    powerCount.push({
+      num: num1digits[i],
+      power: count,
+    });
+  }
+  for (let i = 0; i < num2digits.length; i++) {
+    let count = 0;
+    for (let j = 0; j < num2factors.length; j++) {
+      if (num2digits[i] == num2factors[j]) {
+        count++;
+      }
+    }
+    powerCount.push({
+      num: num2digits[i],
+      power: count,
+    });
+  }
+  powerCount.sort((a, b) => a.num - b.num);
+
+  for (let i = 1; i < powerCount.length; i++) {
+    if (powerCount[i - 1].num == powerCount[i].num) {
+      if (powerCount[i - 1].power > powerCount[i].power) {
+        powerCount.splice(i, i);
+      } else if (powerCount[i - 1].power == powerCount[i].power) {
+        powerCount.splice(i, i);
+      }
     }
   }
 
-  let count = 0;
-  for (let i = 0; i < num2factors.length; i++) {
-    if (num2factors[i] == num2factors[i + 1]) {
-      count++;
-      powerCount.push({
-        num: num2factors[i],
-        power: count,
-      });
-    } else {
-      count = 1;
-      powerCount.push({
-        num: num2factors[i],
-        power: count,
-      });
-    }
-  }
+  let lcm = 1;
+  powerCount.forEach((digit) => {
+    let total = digit.num ** digit.power;
+    lcm *= total;
+  });
 
   console.log(num1factors, num2factors);
-  console.log(powerCount1);
+  console.log(num1digits, num2digits);
   console.log(powerCount);
+
+  console.log(lcm);
 }
 
-console.log(lcm(160, 20));
+console.log(lcm(11, 17));
+// console.log(lcm(8, 5));
+
+// console.log(lcm(560, 42));
