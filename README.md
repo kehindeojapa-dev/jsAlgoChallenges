@@ -281,9 +281,10 @@ oddishOrEvenish(372) -> Evenish // 3 + 7 + 2 = 12;
 Write a function that returns the minimum number of swaps to convert the first binary string into the second.
 
 Examples:
-lcm('1100', '1001') -> 1;
-lcm('1100', '0011') -> 2;
-lcm('1001', '1001') -> 0;
+minSwaps('1100', '1001') -> 1;
+minSwaps('1100', '0011') -> 2;
+minSwaps('110011, '010111') -> 1;
+minSwaps('1001', '1001') -> 0;
 **_source: (Edabit(H))_**
 
 ### C58: LCM of Two Numbers
