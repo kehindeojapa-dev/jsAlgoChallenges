@@ -3,7 +3,7 @@
 ### This repo contains solutions to algorithmic challenges, aim is to get better understanding of Javascript.
 
 - Goal: 100 challenges
-- Milestone: 50 challenges solved
+- Milestone: 65 challenges solved
 - Reference: VH = Very Hard, H = Hard, I = Intermediate, E = Easy, V = Very Easy
 
 ### C80: Persistence
