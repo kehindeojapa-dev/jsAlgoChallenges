@@ -3,7 +3,7 @@
 ### This repo contains solutions to algorithmic challenges, aim is to get better understanding of Javascript.
 
 - Goal: 100 challenges
-- Milestone: 65 challenges solved
+- Milestone: 69 challenges solved
 - Reference: VH = Very Hard, H = Hard, I = Intermediate, E = Easy, V = Very Easy
 
 ### C80: Persistence
@@ -161,7 +161,7 @@ Write a function to replace all instances of character c1 with character c2 and 
 Examples:
 Swap("aabbcc", "a", "b") -> 'bbaaccc'
 Swap("<>", ">", "<") -> "><"
-Swap("128 895 556 788 999", "8", "9") -> "129 985 799 888"
+Swap("128 895 556 788 999", "8", "9") -> "129 985 556 799 888"
 **_source: (Edabit(H))_**
 
 ### C68: Check if the Brick fits through the Hole
